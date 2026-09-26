@@ -57,7 +57,8 @@ app.use(
       }
     },
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Idempotency-Key"],
+    exposedHeaders: ["X-Idempotency-Replayed"],
     credentials: true,
   })
 );
